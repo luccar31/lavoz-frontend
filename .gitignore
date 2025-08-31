@@ -45,3 +45,5 @@ next-env.d.ts
 
 # random
 .swc
+*storybook.log
+storybook-static
