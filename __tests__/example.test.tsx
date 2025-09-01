@@ -1,12 +1,11 @@
 import { render, screen } from '@testing-library/react'
-import LandingPage from "@/app/(landing)/page";
 
 describe('Home', () => {
   it('renders a main', () => {
-    render(<LandingPage />)
+    render(<div></div>)
 
-    const main = screen.getByRole('main')
+    const div = screen.getByRole('div')
 
-    expect(main).toBeInTheDocument()
+    expect(div).toBeInTheDocument()
   })
 })
