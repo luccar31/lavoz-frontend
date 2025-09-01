@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react'
-import Home from "@/app/page";
+import LandingPage from "@/app/(landing)/page";
 
 describe('Home', () => {
   it('renders a main', () => {
-    render(<Home />)
+    render(<LandingPage />)
 
     const main = screen.getByRole('main')
 

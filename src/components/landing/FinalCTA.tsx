@@ -4,6 +4,7 @@ import Container from './Container';
 import Button from './Button';
 import { Flame, Lock } from 'lucide-react';
 import { SiWhatsapp } from '@icons-pack/react-simple-icons';
+import Body from "@/components/landing/Body";
 
 export default function FinalCTA() {
   return (
@@ -21,10 +22,10 @@ export default function FinalCTA() {
           </h2>
 
           <div className="bg-landing-surface p-8 sm:p-12 shadow-xl border border-landing-surface/50">
-            <p className="text-landing-text-secondary text-body mb-6">
+            <Body className="mb-6">
               La inscripción se realiza por WhatsApp para darte una atención personalizada y resolver tus
               últimas dudas. Los cupos son limitados para garantizar la calidad de la experiencia.
-            </p>
+            </Body>
 
             <div className="flex items-center justify-center gap-2 mb-6">
               <Flame className="w-6 h-6 text-brand-red flex-shrink-0" />

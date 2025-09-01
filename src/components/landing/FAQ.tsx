@@ -1,9 +1,10 @@
 // src/components/FAQ.tsx
-"use client"; // Marcamos este componente como un Componente de Cliente
+"use client";
 
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import Container from './Container';
+import Body from "@/components/landing/Body";
 
 // Datos de las preguntas y respuestas
 const faqData = [
@@ -69,9 +70,7 @@ export default function FAQ() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-landing-text-secondary text-body pb-4">
-                      {item.answer}
-                    </p>
+                    <Body className="pb-4">{item.answer}</Body>
                   </div>
                 </div>
               </div>
