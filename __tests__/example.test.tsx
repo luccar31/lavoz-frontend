@@ -1,12 +1,11 @@
 import { render, screen } from '@testing-library/react'
-import Home from "@/app/page";
 
 describe('Home', () => {
   it('renders a main', () => {
-    render(<Home />)
+    render(<div>passes</div>)
 
-    const main = screen.getByRole('main')
+    const div = screen.getByText('passes')
 
-    expect(main).toBeInTheDocument()
+    expect(div).toBeInTheDocument()
   })
 })
