@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# 🔐 Hardcoded Vercel credentials
-VERCEL_TOKEN="QgwvrjRFK5LwN3vRqKQvkb3K"
-VERCEL_ORG_ID="team_sQhPGg8E97ycu76qNAvYLVIP"
-VERCEL_PROJECT_ID="prj_P7I3E3fwHBzgLXzeQASZ5DdVmerk"
+# hay que harcodear las credenciales, por ahora
 
 # Usage:
 # ./sync-env-to-vercel.sh .env.production production
