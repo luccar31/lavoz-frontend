@@ -1,4 +1,3 @@
-import HeaderComingSoon from '@/components/coming-soon/HeaderComingSoon';
 import {Inter, Oswald} from "next/font/google";
 import {Metadata} from "next";
 
