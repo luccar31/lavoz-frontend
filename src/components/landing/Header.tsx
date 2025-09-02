@@ -33,7 +33,7 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
-          <Button href={env.appUrl}>Ir a la app</Button>
+          {env.appReady ? <Button href={env.appUrl}>Ir a la app</Button> : null}
         </nav>
 
         <div className="lg:hidden">

@@ -8,10 +8,12 @@ type Environment = {
   instagramUrl: string;
   youtubeUrl: string;
   spotifyUrl: string;
+  appReady: boolean;
 }
 
 const serverSchema = z.object({
   LAUNCH_MODE_ENABLED: z.coerce.boolean().default(false),
+  APP_READY: z.coerce.boolean().default(false)
 });
 
 const clientSchema = z.object({
@@ -60,7 +62,7 @@ function formatEnv() {
   }
 
   // Para las variables de servidor, proveemos un valor por defecto seguro en el cliente
-  return { ...parsed.data, LAUNCH_MODE_ENABLED: false };
+  return { ...parsed.data, LAUNCH_MODE_ENABLED: false, APP_READY: false };
 }
 
 const envData = formatEnv();
@@ -73,6 +75,7 @@ const env: Environment = {
   instagramUrl: envData.NEXT_PUBLIC_INSTAGRAM_URL,
   youtubeUrl: envData.NEXT_PUBLIC_YOUTUBE_URL,
   spotifyUrl: envData.NEXT_PUBLIC_SPOTIFY_URL,
+  appReady: envData.APP_READY
 };
 
 export default env;
