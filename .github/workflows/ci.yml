@@ -65,10 +65,13 @@ jobs:
       - name: 3. Install Vercel CLI
         run: npm install --global vercel@latest
 
-      - name: 4. Pull Vercel Environment Information and Build Project Artifacts
-        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }} && vercel build --token=${{ secrets.VERCEL_TOKEN }}
+      - name: 4. Pull Vercel Environment Information
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: 5. Deploy Project Artifacts to Vercel
+      - name: 5. Build Project Artifacts
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: 6. Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
 
   deploy_production:
@@ -92,9 +95,12 @@ jobs:
 
       - name: 3. Install Vercel CLI
         run: npm install --global vercel@latest
-        
-      - name: 4. Pull Vercel Environment Information and Build Project Artifacts
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }} && vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: 5. Deploy Project Artifacts to Vercel
+      - name: 4. Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: 5. Build Project Artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: 6. Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
