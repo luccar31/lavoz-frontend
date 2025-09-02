@@ -26,6 +26,23 @@ const clientSchema = z.object({
 });
 
 function formatEnv() {
+<<<<<<< Updated upstream
+=======
+  
+  if (process.env.CI && process.env.CI === '1') {
+    return {
+      NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL as unknown as string,
+      NEXT_PUBLIC_CTA_REDIRECT_URL: process.env.NEXT_PUBLIC_CTA_REDIRECT_URL as unknown as string,
+      LAUNCH_MODE_ENABLED: process.env.LAUNCH_MODE_ENABLED as unknown as boolean,
+      NEXT_PUBLIC_COMING_SOON_TEASER_URL: process.env.NEXT_PUBLIC_COMING_SOON_TEASER_URL as unknown as string,
+      NEXT_PUBLIC_INSTAGRAM_URL: process.env.NEXT_PUBLIC_INSTAGRAM_URL as unknown as string,
+      NEXT_PUBLIC_YOUTUBE_URL: process.env.NEXT_PUBLIC_YOUTUBE_URL as unknown as string,
+      NEXT_PUBLIC_SPOTIFY_URL: process.env.NEXT_PUBLIC_SPOTIFY_URL as unknown as string,
+      APP_READY: process.env.APP_READY as unknown as boolean,
+    }
+  }
+  
+>>>>>>> Stashed changes
   // En el servidor, validamos todo
   if (typeof window === 'undefined') {
     const envData = {
@@ -39,7 +56,10 @@ function formatEnv() {
       );
       throw new Error(`Invalid environment variables: ${z.treeifyError(parsed.error).errors}`);
     }
+<<<<<<< Updated upstream
     return parsed.data;
+=======
+>>>>>>> Stashed changes
   }
 
   // En el cliente, solo validamos las variables públicas
