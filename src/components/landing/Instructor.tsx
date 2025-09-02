@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { SiInstagram, SiYoutube, SiSpotify } from '@icons-pack/react-simple-icons';
 import Container from './Container';
+import env from "@/lib/env";
 // Ya no necesitamos el botón aquí
 // import Button from './Button'; 
 
@@ -36,13 +37,13 @@ export default function Instructor() {
             </div>
             {/* CAMBIO: Eliminamos el botón, solo dejamos los íconos sociales */}
             <div className="mt-6 flex items-center gap-4">
-              <a href="#" aria-label="Instagram" className="text-brand-red hover:text-landing-text-primary transition-colors">
+              <a href={env.instagramUrl} aria-label="Instagram" className="text-brand-red hover:text-landing-text-primary transition-colors">
                 <SiInstagram size={24} />
               </a>
-              <a href="#" aria-label="Youtube" className="text-brand-red hover:text-landing-text-primary transition-colors">
+              <a href={env.youtubeUrl} aria-label="Youtube" className="text-brand-red hover:text-landing-text-primary transition-colors">
                 <SiYoutube size={24} />
               </a>
-              <a href="#" aria-label="Spotify" className="text-brand-red hover:text-landing-text-primary transition-colors">
+              <a href={env.spotifyUrl} aria-label="Spotify" className="text-brand-red hover:text-landing-text-primary transition-colors">
                 <SiSpotify size={24} />
               </a>
             </div>

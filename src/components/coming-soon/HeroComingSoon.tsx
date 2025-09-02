@@ -4,6 +4,7 @@ import { Play } from 'lucide-react';
 import Container from '@/components/landing/Container';
 import Button from '@/components/landing/Button';
 import H1 from "@/components/landing/H1";
+import env from "@/lib/env";
 
 export default function HeroComingSoon() {
   return (
@@ -33,7 +34,7 @@ export default function HeroComingSoon() {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
-            <Button href={process.env.NEXT_PUBLIC_COMING_SOON_TEASER_URL ?? ''} size="default" className="gap-2">
+            <Button href={env.comingSoonTeaserUrl} size="default" className="gap-2">
               <Play size={18} /> Ver Adelanto
             </Button>
           </div>

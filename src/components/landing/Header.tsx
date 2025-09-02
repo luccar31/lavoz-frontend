@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
 import Container from './Container';
+import env from '@/lib/env'
 
 const navLinks = [
   { name: 'El Curso', href: '#curso' },
@@ -18,7 +19,7 @@ export default function Header() {
   return (
     <header className="py-4 fixed top-0 left-0 w-full z-50 bg-landing-background/80 backdrop-blur-sm border-b border-landing-surface/50">
       <Container className="flex justify-between items-center">
-        <Link href="/public" className="font-oswald font-bold text-h3 uppercase text-landing-text-primary">
+        <Link href="/" className="font-oswald font-bold text-h3 uppercase text-landing-text-primary">
           LA VOZ
         </Link>
 
@@ -32,7 +33,7 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
-          <Button href="#">Ir a la app</Button>
+          <Button href={env.appUrl}>Ir a la app</Button>
         </nav>
 
         <div className="lg:hidden">
@@ -60,7 +61,7 @@ export default function Header() {
                 {link.name}
               </Link>
             ))}
-            <Button href="#inscribirme" className="mt-4">Inscribite</Button>
+            <Button href={env.ctaRedirectUrl} className="mt-4">Inscribite</Button>
           </nav>
         </div>
       )}

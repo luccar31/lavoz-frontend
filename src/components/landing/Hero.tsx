@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Container from '@/components/landing/Container';
 import CTAButton from "@/components/landing/CTAButton";
 import H1 from "@/components/landing/H1";
+import env from "@/lib/env";
 
 export default function Hero() {
   return (
@@ -28,7 +29,7 @@ export default function Hero() {
             Autoconocimiento del ser. Redescubrí tu sonido interior.
           </p>
           <div className="mt-8">
-            <CTAButton href="#inscripcion">
+            <CTAButton href={env.ctaRedirectUrl}>
               ¡Inscribite ya!
             </CTAButton>
           </div>
