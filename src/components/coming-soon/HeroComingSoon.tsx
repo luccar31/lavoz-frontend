@@ -33,7 +33,7 @@ export default function HeroComingSoon() {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
-            <Button href="#notificarme" size="default" className="gap-2">
+            <Button href={process.env.NEXT_PUBLIC_COMING_SOON_TEASER_URL ?? ''} size="default" className="gap-2">
               <Play size={18} /> Ver Adelanto
             </Button>
           </div>
