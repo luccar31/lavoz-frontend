@@ -9,6 +9,7 @@ import H2 from "@/components/landing/H2";
 import Body from "@/components/landing/Body";
 import CTAButton from "@/components/landing/CTAButton";
 import IncludesList from "@/components/landing/IncludesList";
+import env from "@/lib/env";
 
 type IncludesProps = {
   icon: IconName,
@@ -63,7 +64,7 @@ export default function Includes() {
             <IncludesList items={includedItems}/>
           </div>
           <div className="mt-12">
-            <CTAButton href="#whatsapp-link">¡Inscribite ya!</CTAButton>
+            <CTAButton href={env.ctaRedirectUrl}>¡Inscribite ya!</CTAButton>
           </div>
         </div>
       </Container>

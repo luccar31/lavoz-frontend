@@ -3,6 +3,7 @@ import React from 'react';
 import { Calendar, Clock, Video, Award, Users } from 'lucide-react';
 import Container from './Container';
 import Button from "@/components/landing/Button";
+import env from "@/lib/env";
 
 // Array de datos para todos los detalles del curso
 const courseDetails = [
@@ -83,7 +84,7 @@ export default function CourseDetails() {
             <p className="mb-4 font-oswald font-bold text-h3 uppercase text-landing-text-primary">
              No pierdas tu lugar
             </p>
-            <Button href="#whatsapp-link" size="lg" className="w-1/2">
+            <Button href={env.ctaRedirectUrl} size="lg" className="w-1/2">
               ¡Inscribite ya!
             </Button>
           </div>

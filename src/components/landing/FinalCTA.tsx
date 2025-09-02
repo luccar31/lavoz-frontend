@@ -5,6 +5,7 @@ import Button from './Button';
 import { Flame, Lock } from 'lucide-react';
 import { SiWhatsapp } from '@icons-pack/react-simple-icons';
 import Body from "@/components/landing/Body";
+import env from "@/lib/env";
 
 export default function FinalCTA() {
   return (
@@ -36,7 +37,7 @@ export default function FinalCTA() {
 
             {/* CAMBIO CLAVE AQUÍ: Aseguramos que el botón sea de ancho completo */}
             {/* y que su contenido interno (flex items-center justify-center) maneje el centrado */}
-            <Button href="#whatsapp-link" size="lg" className="w-full flex items-center justify-center gap-2">
+            <Button href={env.ctaRedirectUrl} size="lg" className="w-full flex items-center justify-center gap-2">
               <SiWhatsapp size={24} /> Inscribirme por WhatsApp
             </Button>
 
