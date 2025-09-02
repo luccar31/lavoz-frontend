@@ -1,8 +1,9 @@
 // src/components/Footer.tsx
 import React from 'react';
 import Link from 'next/link';
-import { SiInstagram, SiYoutube, SiFacebook } from '@icons-pack/react-simple-icons';
+import {SiInstagram, SiYoutube} from '@icons-pack/react-simple-icons';
 import Container from './Container';
+import env from '@/lib/env'
 
 export default function Footer() {
   return (
@@ -20,13 +21,10 @@ export default function Footer() {
               Curso especializado en técnica vocal para artistas que buscan potenciar su expresión.
             </p>
             <div className="flex space-x-4">
-              <a href="#" aria-label="Instagram" className="hover:text-landing-text-primary transition-colors">
+              <a href={env.instagramUrl} aria-label="Instagram" className="hover:text-landing-text-primary transition-colors">
                 <SiInstagram size={20} />
               </a>
-              <a href="#" aria-label="Facebook" className="hover:text-landing-text-primary transition-colors">
-                <SiFacebook size={20} />
-              </a>
-              <a href="#" aria-label="Youtube" className="hover:text-landing-text-primary transition-colors">
+              <a href={env.youtubeUrl} aria-label="Youtube" className="hover:text-landing-text-primary transition-colors">
                 <SiYoutube size={20} />
               </a>
             </div>
