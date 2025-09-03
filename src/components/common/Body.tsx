@@ -5,7 +5,7 @@ type BodyProps = {
   className?: string;
 }
 
-export default function Body({ children, className = '' }: BodyProps) {
+export default function Body({children, className = ''}: BodyProps) {
   return (
     <p className={`text-landing-text-secondary text-body ${className}`}>
       {children}

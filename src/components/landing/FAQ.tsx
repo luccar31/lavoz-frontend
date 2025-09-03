@@ -1,10 +1,11 @@
-// src/components/FAQ.tsx
 "use client";
 
-import React, { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
-import Container from './Container';
-import Body from "@/components/landing/Body";
+import {useState} from 'react';
+import {Minus, Plus} from 'lucide-react';
+import Container from '@/components/common/Container';
+import Body from "@/components/common/Body";
+import CTAButton from "@/components/common/CTAButton";
+import env from "@/lib/env";
 
 // Datos de las preguntas y respuestas
 const faqData = [
@@ -57,9 +58,9 @@ export default function FAQ() {
                     {item.question}
                   </span>
                   {openIndex === index ? (
-                    <Minus className="w-6 h-6 text-brand-red" />
+                    <Minus className="w-6 h-6 text-brand-red"/>
                   ) : (
-                    <Plus className="w-6 h-6 text-landing-text-secondary" />
+                    <Plus className="w-6 h-6 text-landing-text-secondary"/>
                   )}
                 </button>
 
@@ -75,6 +76,12 @@ export default function FAQ() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-16">
+            <p className="mb-4 font-oswald font-bold text-h3 uppercase text-landing-text-primary">
+              No dudes más
+            </p>
+            <CTAButton href={env.ctaRedirectUrl}>¡Inscribite ya!</CTAButton>
           </div>
         </div>
       </Container>

@@ -1,7 +1,7 @@
 import {Inter, Oswald} from "next/font/google";
 import {Metadata} from "next";
+import {ReactNode} from "react";
 
-// Configuración de las fuentes
 const oswald = Oswald({
   subsets: ['latin'],
   weight: ['500', '700'],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function ComingSoonLayout({
                                            children,
                                          }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <div className={`${oswald.variable} ${inter.variable} font-inter`}>

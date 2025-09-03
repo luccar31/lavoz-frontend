@@ -1,8 +1,7 @@
-// src/components/Hero.tsx
 import Image from 'next/image';
-import Container from '@/components/landing/Container';
-import CTAButton from "@/components/landing/CTAButton";
-import H1 from "@/components/landing/H1";
+import Container from '@/components/common/Container';
+import CTAButton from "@/components/common/CTAButton";
+import H1 from "@/components/common/H1";
 import env from "@/lib/env";
 
 export default function Hero() {
@@ -13,13 +12,13 @@ export default function Hero() {
     >
       <div className="absolute inset-0 z-[-1]">
         <Image
-          src="/images/hero-background.jpg"
+          src="/images/hero-prod.jpeg"
           alt="Artista cantando en un escenario con luces rojas"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-landing-background/70" />
+        <div className="absolute inset-0 bg-landing-background/70"/>
       </div>
 
       <Container>
