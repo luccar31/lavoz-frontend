@@ -1,13 +1,8 @@
-// src/components/Includes.tsx
-import { DynamicIcon } from 'lucide-react/dynamic';
-import { IconName } from 'lucide-react/dynamic'
-import Container from './Container';
-import Button from "@/components/landing/Button";
-import {SiWhatsapp} from "@icons-pack/react-simple-icons";
-import React from "react";
-import H2 from "@/components/landing/H2";
-import Body from "@/components/landing/Body";
-import CTAButton from "@/components/landing/CTAButton";
+import {IconName} from 'lucide-react/dynamic'
+import Container from '../common/Container';
+import H2 from "@/components/common/H2";
+import Body from "@/components/common/Body";
+import CTAButton from "@/components/common/CTAButton";
 import IncludesList from "@/components/landing/IncludesList";
 import env from "@/lib/env";
 
@@ -47,16 +42,19 @@ const includedItems: IncludesProps[] = [
 
 export default function Includes() {
   return (
-    <section id="curso" className="bg-landing-background min-h-[100dvh] flex items-center py-landing-12 lg:py-landing-16">
+    <section id="curso"
+             className="bg-landing-background min-h-[100dvh] flex items-center py-landing-12 lg:py-landing-16">
       <Container>
         <div className="max-w-5xl mx-auto text-center">
           <H2>Qué incluye el curso</H2>
           <div className="mt-4 max-w-2xl mx-auto space-y-4">
             <Body>
-              Para voz hablada o cantada, ideal para quienes usan su voz como herramienta de trabajo. Un método único que combina técnica vocal con la energía y autenticidad del rock.
+              Para voz hablada o cantada, ideal para quienes usan su voz como herramienta de trabajo. Un método único
+              que combina técnica vocal con la energía y autenticidad del rock.
             </Body>
             <Body>
-              Desarrollado por profesionales con más de 15 años de experiencia en la industria musical y la pedagogía vocal.
+              Desarrollado por profesionales con más de 15 años de experiencia en la industria musical y la pedagogía
+              vocal.
             </Body>
           </div>
 

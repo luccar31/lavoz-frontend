@@ -1,5 +1,4 @@
 import {IconName} from "lucide-react/dynamic";
-import React from "react";
 import IncludesListItem from "@/components/landing/IncludesListItem";
 
 export type IncludesItem = {
@@ -20,13 +19,13 @@ export default function IncludesList({items}: IncludesListProps) {
   const gridItems = isOdd ? items.slice(0, -1) : items;
 // Si es impar, el último ítem es el que irá centrado. Si es par, no hay ítem centrado.
   const centeredItem = isOdd ? items[items.length - 1] : null;
-  
+
   return (
     <>
       {/* Grid predecible para los ítems en pares */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
         {gridItems.map((item, index) => (
-          <IncludesListItem item={item} key={index} />
+          <IncludesListItem item={item} key={index}/>
         ))}
       </div>
 

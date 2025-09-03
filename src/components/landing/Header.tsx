@@ -1,23 +1,24 @@
 "use client";
 
-import { useState } from 'react';
+import {useState} from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-import Button from './Button';
-import Container from './Container';
+import {Menu, X} from 'lucide-react';
+import Button from '@/components/common/Button';
+import Container from '@/components/common/Container';
 import env from '@/lib/env'
 
 const navLinks = [
-  { name: 'El Curso', href: '#curso' },
-  { name: 'Detalles', href: '#detalles' },
-  { name: 'Inscripción', href: '#inscripcion' },
+  {name: 'El Curso', href: '#curso'},
+  {name: 'Detalles', href: '#detalles'},
+  {name: 'Inscripción', href: '#inscripcion'},
 ];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="py-4 fixed top-0 left-0 w-full z-50 bg-landing-background/80 backdrop-blur-sm border-b border-landing-surface/50">
+    <header
+      className="py-4 fixed top-0 left-0 w-full z-50 bg-landing-background/80 backdrop-blur-sm border-b border-landing-surface/50">
       <Container className="flex justify-between items-center">
         <Link href="/" className="font-oswald font-bold text-h3 uppercase text-landing-text-primary">
           LA VOZ
@@ -43,7 +44,7 @@ export default function Header() {
             aria-expanded={isMenuOpen}
             className="text-landing-text-primary"
           >
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMenuOpen ? <X size={28}/> : <Menu size={28}/>}
           </button>
         </div>
       </Container>

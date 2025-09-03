@@ -1,9 +1,8 @@
 // src/components/Testimonials.tsx
 import React from 'react';
-import Image from 'next/image';
-import Container from './Container';
-import CTAButton from "@/components/landing/CTAButton";
-import H2 from "@/components/landing/H2";
+import Container from '../common/Container';
+import CTAButton from "@/components/common/CTAButton";
+import H2 from "@/components/common/H2";
 import TestimonialsList from "@/components/landing/TestimonialsList";
 
 // Creamos un array con los datos de los testimonios para mantener el código limpio
