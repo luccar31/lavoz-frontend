@@ -68,11 +68,11 @@ jobs:
       - name: 4. Install dotenv-cli
         run: npm install -g dotenv-cli
 
-      - name: 5. Build Project Artifacts with dotenv
-        run: dotenv -e .vercel/.env.preview.local -- vercel build --token=${{ secrets.VERCEL_TOKEN }}
+      - name: 5. Pull Vercel Environment Information
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: 6. Build Project Artifacts
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+        run: dotenv -e .vercel/.env.preview.local -- vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: 7. Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
