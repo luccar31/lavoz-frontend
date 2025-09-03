@@ -1,6 +1,5 @@
 // todo: fix jest when it tries to import dynamic icons
 import {DynamicIcon} from "lucide-react/dynamic";
-import React from "react";
 import type {IncludesItem} from "@/components/landing/IncludesList";
 
 type IncludesItemProps = {

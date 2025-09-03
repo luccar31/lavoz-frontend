@@ -1,4 +1,4 @@
-import Button from "@/components/landing/Button";
+import Button from "@/components/common/Button";
 import {ReactNode} from "react";
 
 type CTAButtonProps = {

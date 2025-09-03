@@ -1,10 +1,9 @@
-// src/components/FAQ.tsx
 "use client";
 
-import React, { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
-import Container from './Container';
-import Body from "@/components/landing/Body";
+import {useState} from 'react';
+import {Minus, Plus} from 'lucide-react';
+import Container from '@/components/common/Container';
+import Body from "@/components/common/Body";
 
 // Datos de las preguntas y respuestas
 const faqData = [
@@ -57,9 +56,9 @@ export default function FAQ() {
                     {item.question}
                   </span>
                   {openIndex === index ? (
-                    <Minus className="w-6 h-6 text-brand-red" />
+                    <Minus className="w-6 h-6 text-brand-red"/>
                   ) : (
-                    <Plus className="w-6 h-6 text-landing-text-secondary" />
+                    <Plus className="w-6 h-6 text-landing-text-secondary"/>
                   )}
                 </button>
 

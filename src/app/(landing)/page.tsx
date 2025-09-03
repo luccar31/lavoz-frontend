@@ -1,4 +1,3 @@
-// src/app/(landing)/page.tsx
 import Hero from '@/components/landing/Hero';
 import Includes from '@/components/landing/Includes';
 import Instructor from "@/components/landing/Instructor";

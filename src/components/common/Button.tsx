@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import {ReactNode} from 'react';
 import Link from 'next/link';
 
 type ButtonProps = {
@@ -25,7 +25,7 @@ const variantClasses = {
   outline: 'bg-transparent border-landing-text-secondary text-landing-text-secondary hover:bg-landing-text-secondary hover:text-landing-background',
 };
 
-export default function Button({ href, children, className = '', size = 'default', variant = 'solid' }: ButtonProps) {
+export default function Button({href, children, className = '', size = 'default', variant = 'solid'}: ButtonProps) {
   return (
     <Link
       href={href}
