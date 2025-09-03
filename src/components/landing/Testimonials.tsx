@@ -1,6 +1,4 @@
-// src/components/Testimonials.tsx
-import React from 'react';
-import Container from '../common/Container';
+import Container from '@/components/common/Container';
 import CTAButton from "@/components/common/CTAButton";
 import H2 from "@/components/common/H2";
 import TestimonialsList from "@/components/landing/TestimonialsList";

@@ -47,3 +47,4 @@ next-env.d.ts
 .swc
 *storybook.log
 storybook-static
+.env*.local

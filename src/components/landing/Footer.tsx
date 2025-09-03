@@ -14,7 +14,7 @@ export default function Footer() {
               LA VOZ
             </h3>
             <p className="text-sm">
-              Curso especializado en técnica vocal para artistas que buscan potenciar su expresión.
+              Curso especializado en técnica vocal para todo aquel que busca descubrir el potencial de su voz
             </p>
             <div className="flex space-x-4">
               <a href={env.instagramUrl} aria-label="Instagram"
@@ -41,13 +41,12 @@ export default function Footer() {
           </div>
 
         </div>
-
-        <div
-          className="flex flex-col md:flex-row justify-between items-center border-t border-landing-surface/50 py-6 text-sm">
-          <p>&copy; {new Date().getFullYear()} LA VOZ - Descubrimiento del ser. Todos los derechos reservados.</p>
-          <p>Desarrollado por LDAV Software. Contactanos al contacto@ldavsoftware.net</p>
-        </div>
       </Container>
+      <div
+        className="flex flex-col md:flex-row justify-around items-center border-t border-landing-surface/50 py-6 px-6 text-sm">
+        <p>&copy; {new Date().getFullYear()} LA VOZ - Descubrimiento del ser. Todos los derechos reservados.</p>
+        <p className="text-right">Desarrollado por LDAV Software. Contactanos al <a className="text-accent-focus" href="mailto:contacto@ldavsoftware.net">contacto@ldavsoftware.net</a></p>
+      </div>
     </footer>
   );
 }

@@ -9,8 +9,11 @@ import env from '@/lib/env'
 
 const navLinks = [
   {name: 'El Curso', href: '#curso'},
+  {name: 'El Profe', href: '#instructor'},
   {name: 'Detalles', href: '#detalles'},
+  {name: 'Testimonios', href: '#testimonios'},
   {name: 'Inscripción', href: '#inscripcion'},
+  {name: 'Preguntas', href: '#faq'},
 ];
 
 export default function Header() {
@@ -20,7 +23,7 @@ export default function Header() {
     <header
       className="py-4 fixed top-0 left-0 w-full z-50 bg-landing-background/80 backdrop-blur-sm border-b border-landing-surface/50">
       <Container className="flex justify-between items-center">
-        <Link href="/" className="font-oswald font-bold text-h3 uppercase text-landing-text-primary">
+        <Link href="#" className="font-oswald font-bold text-h3 uppercase text-landing-text-primary">
           LA VOZ
         </Link>
 

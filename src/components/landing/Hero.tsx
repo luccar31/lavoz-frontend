@@ -12,7 +12,7 @@ export default function Hero() {
     >
       <div className="absolute inset-0 z-[-1]">
         <Image
-          src="/images/hero-background.jpg"
+          src="/images/hero-prod.jpeg"
           alt="Artista cantando en un escenario con luces rojas"
           fill
           className="object-cover"

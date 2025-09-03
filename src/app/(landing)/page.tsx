@@ -14,8 +14,8 @@ export default function LandingPage() {
       <Instructor />
       <CourseDetails />
       <Testimonials />
-      <FAQ />
       <FinalCTA />
+      <FAQ />
     </>
   );
 } 
