@@ -4,6 +4,8 @@ import {useState} from 'react';
 import {Minus, Plus} from 'lucide-react';
 import Container from '@/components/common/Container';
 import Body from "@/components/common/Body";
+import CTAButton from "@/components/common/CTAButton";
+import env from "@/lib/env";
 
 // Datos de las preguntas y respuestas
 const faqData = [
@@ -74,6 +76,12 @@ export default function FAQ() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-16">
+            <p className="mb-4 font-oswald font-bold text-h3 uppercase text-landing-text-primary">
+              No dudes más
+            </p>
+            <CTAButton href={env.ctaRedirectUrl}>¡Inscribite ya!</CTAButton>
           </div>
         </div>
       </Container>

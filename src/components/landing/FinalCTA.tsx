@@ -37,17 +37,13 @@ export default function FinalCTA() {
             <Button href={env.ctaRedirectUrl} size="lg" className="w-full flex items-center justify-center gap-2">
               <SiWhatsapp size={24}/> Inscribirme por WhatsApp
             </Button>
-
-            <p className="mt-4 text-xs text-landing-text-secondary/70">
-              Al inscribirte, aceptas nuestros <a href="#" className="underline hover:text-landing-text-primary">términos
-              y condiciones</a>.
-            </p>
+            
           </div>
 
           <div className="mt-8 text-landing-text-secondary/70 flex flex-col items-center gap-2">
             <Lock className="w-5 h-5"/>
             <p className="text-sm">
-              Pago seguro garantizado. Aceptamos todas las tarjetas de crédito y débito.
+              Pago seguro garantizado
             </p>
           </div>
         </div>

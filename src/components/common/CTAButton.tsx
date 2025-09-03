@@ -4,11 +4,12 @@ import {ReactNode} from "react";
 type CTAButtonProps = {
   children: ReactNode;
   href: string;
+  className?: string;
 }
 
-export default function CTAButton({children, href}: CTAButtonProps) {
+export default function CTAButton({children, href, className}: CTAButtonProps) {
   return (
-    <Button href={href} size="lg" className="w-1/2">
+    <Button href={href} size="lg" className={`w-1/2 ${className}`}>
       {children}
     </Button>
   )
