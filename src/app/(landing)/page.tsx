@@ -1,4 +1,3 @@
-// src/app/(landing)/page.tsx
 import Hero from '@/components/landing/Hero';
 import Includes from '@/components/landing/Includes';
 import Instructor from "@/components/landing/Instructor";
@@ -6,6 +5,7 @@ import CourseDetails from "@/components/landing/CourseDetails";
 import Testimonials from "@/components/landing/Testimonials";
 import FAQ from "@/components/landing/FAQ";
 import FinalCTA from "@/components/landing/FinalCTA";
+import Syllabus from "@/components/landing/Syllabus";
 
 export default function LandingPage() {
   return (
@@ -15,8 +15,9 @@ export default function LandingPage() {
       <Instructor />
       <CourseDetails />
       <Testimonials />
-      <FAQ />
       <FinalCTA />
+      <FAQ />
+      <Syllabus />
     </>
   );
 } 

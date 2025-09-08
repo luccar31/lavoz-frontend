@@ -1,32 +1,32 @@
-// src/components/FAQ.tsx
 "use client";
 
-import React, { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
-import Container from './Container';
-import Body from "@/components/landing/Body";
+import {useState} from 'react';
+import {Minus, Plus} from 'lucide-react';
+import Container from '@/components/common/Container';
+import Body from "@/components/common/Body";
+import CTAButton from "@/components/common/CTAButton";
+import env from "@/lib/env";
 
-// Datos de las preguntas y respuestas
 const faqData = [
   {
     question: '¿Necesito experiencia previa?',
     answer: 'No, el curso está diseñado para todos los niveles. Desde principiantes hasta cantantes con experiencia encontrarán valor en el contenido.',
   },
   {
-    question: '¿Qué sucede si no puedo asistir a una clase?',
+    question: '¿Qué pasa si no puedo asistir a una clase?',
     answer: 'Todas las clases quedan grabadas y disponibles en la plataforma por 6 meses después de finalizado el curso.',
   },
   {
     question: '¿Cuánto dura el curso?',
-    answer: 'El curso tiene una duración de 12 semanas, con una clase semanal de 2 horas.',
+    answer: 'El curso tiene una duración de 12 semanas, con una clase semanal de 1:30 horas.',
   },
   {
     question: '¿Qué equipamiento necesito?',
-    answer: 'Solo necesitas una computadora con conexión a internet, auriculares y preferentemente un micrófono (aunque no es obligatorio).',
+    answer: 'Solo necesitás una computadora o celular con acceso a camara, micrófono y conexión a internet.',
   },
   {
     question: '¿Recibo algún certificado?',
-    answer: 'Sí, al finalizar el curso recibirás un certificado digital que acredita tu participación y aprobación.',
+    answer: 'Sí, al finalizar el curso vas a recibir un certificado digital que acredita tu participación y aprobación.',
   },
 ];
 
@@ -57,13 +57,12 @@ export default function FAQ() {
                     {item.question}
                   </span>
                   {openIndex === index ? (
-                    <Minus className="w-6 h-6 text-brand-red" />
+                    <Minus className="w-6 h-6 text-brand-red"/>
                   ) : (
-                    <Plus className="w-6 h-6 text-landing-text-secondary" />
+                    <Plus className="w-6 h-6 text-landing-text-secondary"/>
                   )}
                 </button>
 
-                {/* --- CAMBIOS PARA LA ANIMACIÓN AQUÍ --- */}
                 <div
                   className={`grid transition-[grid-template-rows] duration-500 ease-in-out ${
                     openIndex === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
@@ -75,6 +74,12 @@ export default function FAQ() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-16">
+            <p className="mb-4 font-oswald font-bold text-h3 uppercase text-landing-text-primary">
+              No dudes más
+            </p>
+            <CTAButton href={env.ctaRedirectUrl}>¡Inscribite ya!</CTAButton>
           </div>
         </div>
       </Container>

@@ -1,6 +1,5 @@
 import { z } from "zod";
 
-// --- Base environment type (inferred from schema instead of manual typing)
 const serverSchema = z.object({
   LAUNCH_MODE_ENABLED: z.coerce.boolean().default(false),
   APP_READY: z.coerce.boolean().default(false),
@@ -36,7 +35,6 @@ function parseSchema<T extends z.ZodTypeAny>(
 
 const isServer = typeof window === "undefined"
 
-// --- Format function
 function formatEnv(): RawEnv {
   // Differentiate between server and client
   const envData =
@@ -63,7 +61,6 @@ function formatEnv(): RawEnv {
   };
 }
 
-// --- Final environment type
 export type Environment = {
   appUrl: string;
   ctaRedirectUrl: string;
@@ -75,7 +72,6 @@ export type Environment = {
   appReady: boolean;
 };
 
-// --- Build final env object
 const rawEnv = formatEnv();
 
 export const env: Environment = {
