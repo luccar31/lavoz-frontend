@@ -22,7 +22,7 @@ const faqData = [
   },
   {
     question: '¿Qué equipamiento necesito?',
-    answer: 'Solo necesitás una computadora con conexión a internet, auriculares y preferentemente un micrófono.',
+    answer: 'Solo necesitás una computadora o celular con acceso a camara, micrófono y conexión a internet.',
   },
   {
     question: '¿Recibo algún certificado?',
