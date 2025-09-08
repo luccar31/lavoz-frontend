@@ -16,12 +16,12 @@ const includedItems: IncludesProps[] = [
   {
     icon: 'mic-vocal',
     title: '12 CLASES EN VIVO',
-    description: 'Sesiones interactivas con feedback personalizado en tiempo real. Aprendé directamente de profesionales activos en la industria.',
+    description: 'Sesiones interactivas con retroalimentación personalizada en tiempo real. Aprendé directamente en vivo con el profe Mati.',
   },
   {
     icon: 'book-open',
     title: 'MATERIAL EXCLUSIVO',
-    description: 'Bibliografía de consulta y recursos desarrollados específicamente para el curso, con técnicas adaptadas al estilo rock.',
+    description: 'Bibliografía de consulta y recursos desarrollados específicamente para el curso, con técnicas adaptadas para todos los tipos de voces.',
   },
   {
     icon: 'video',
@@ -36,7 +36,7 @@ const includedItems: IncludesProps[] = [
   {
     icon: 'users',
     title: 'COMUNIDAD EXCLUSIVA',
-    description: 'Acceso a grupo privado para compartir experiencias, recibir feedback adicional y conectar con otros artistas.',
+    description: 'Acceso a grupo privado para compartir experiencias, recibir retroalimentación adicional y conectar con otros artistas.',
   },
 ];
 
@@ -50,10 +50,10 @@ export default function Includes() {
           <div className="mt-4 max-w-2xl mx-auto space-y-4">
             <Body>
               Para voz hablada o cantada, ideal para quienes usan su voz como herramienta de trabajo. Un método único
-              que combina técnica vocal con la energía y autenticidad del rock.
+              que combina técnica vocal con la energía y autenticidad cada voz.
             </Body>
             <Body>
-              Desarrollado por profesionales con más de 15 años de experiencia en la industria musical y la pedagogía
+              Desarrollado con los conocimientos de más de 15 años de experiencia en la industria musical y la pedagogía
               vocal.
             </Body>
           </div>
