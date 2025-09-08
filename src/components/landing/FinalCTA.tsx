@@ -17,7 +17,7 @@ export default function FinalCTA() {
           <h2 className="font-oswald font-bold text-h2 uppercase text-landing-text-primary mb-10">
             Tu voz es tu herramienta.
             <br/>
-            Es hora de dominarla.
+            Es hora de conocerla.
           </h2>
 
           <div className="bg-landing-surface p-8 sm:p-12 shadow-xl border border-landing-surface/50">
