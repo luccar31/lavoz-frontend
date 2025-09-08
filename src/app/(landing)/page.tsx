@@ -5,6 +5,7 @@ import CourseDetails from "@/components/landing/CourseDetails";
 import Testimonials from "@/components/landing/Testimonials";
 import FAQ from "@/components/landing/FAQ";
 import FinalCTA from "@/components/landing/FinalCTA";
+import Syllabus from "@/components/landing/Syllabus";
 
 export default function LandingPage() {
   return (
@@ -16,6 +17,7 @@ export default function LandingPage() {
       <Testimonials />
       <FinalCTA />
       <FAQ />
+      <Syllabus />
     </>
   );
 } 
