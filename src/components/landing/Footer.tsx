@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {SiInstagram, SiYoutube} from '@icons-pack/react-simple-icons';
-import Container from '../common/Container';
+import Container from '@/components/common/Container';
 import env from '@/lib/env'
 
 export default function Footer() {
@@ -33,19 +33,21 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="#curso" className="hover:text-landing-text-primary transition-colors">El Curso</Link></li>
               <li><Link href="#instructor"
-                        className="hover:text-landing-text-primary transition-colors">Instructor</Link></li>
-              <li><Link href="#testimonios"
+                        className="hover:text-landing-text-primary transition-colors">El Profe</Link></li>
+              <li><Link href="#instructor"
+                        className="hover:text-landing-text-primary transition-colors">Detalles</Link></li>
+              <li><Link href="#detalles"
                         className="hover:text-landing-text-primary transition-colors">Testimonios</Link></li>
               <li><Link href="#faq" className="hover:text-landing-text-primary transition-colors">Preguntas</Link></li>
+              <li><Link href="#inscripcion" className="hover:text-landing-text-primary transition-colors">Inscripción</Link></li>
             </ul>
           </div>
-
         </div>
       </Container>
       <div
         className="flex flex-col md:flex-row justify-around items-center border-t border-landing-surface/50 py-6 px-6 text-sm">
         <p>&copy; {new Date().getFullYear()} LA VOZ - Descubrimiento del ser. Todos los derechos reservados.</p>
-        <p className="text-right">Desarrollado por LDAV Software. Contactanos al <a className="text-accent-focus" href="mailto:contacto@ldavsoftware.net">contacto@ldavsoftware.net</a></p>
+        <p className="md:text-right">Desarrollado por LDAV Software. Contactanos al <a className="text-accent-focus" href="mailto:contacto@ldavsoftware.net">contacto@ldavsoftware.net</a></p>
       </div>
     </footer>
   );
